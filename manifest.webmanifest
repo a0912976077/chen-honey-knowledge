@@ -1,0 +1,11 @@
+{
+  "name":"陳家蜂蜜養蜂智庫",
+  "short_name":"陳家養蜂智庫",
+  "description":"公開的養蜂知識、蜂場天氣與蜂群健康問答",
+  "lang":"zh-Hant",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#fffaf0",
+  "theme_color":"#0d2d24",
+  "icons":[{"src":"assets/app-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
