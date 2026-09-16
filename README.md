@@ -24,7 +24,7 @@ npm start
 
 ## 公開部署
 
-新版需要能執行 Node.js 並提供「持久磁碟」的主機，不能只使用 GitHub Pages。部署時執行 `npm install` 與 `npm start`，並設定 `ADMIN_PASSWORD`、`SESSION_SECRET`、`MAX_UPLOAD_MB`。必須把持久磁碟掛載到專案的 `data/` 與 `uploads/`，否則主機重啟或重新部署時，上傳資料可能消失。
+新版需要後端才能安全驗證密碼並保存上傳檔案，不能只使用 GitHub Pages。為避免任何主機費用，正式版規劃使用 Supabase Free 的資料庫、Storage 與 Edge Functions；免費額度內不收費。`server.js` 則保留給本機執行與測試。
 
 「問智庫」仍是公開、免費、無登入的本地知識檢索版，現在會同時載入後台新增的資料。若未來要讓長尾問題生成更自然的綜合回答，可再由現有後端串接大型語言模型；API 金鑰只能放在後端環境變數。
 
