@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: chen-honey-knowledge
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: STORAGE_ROOT
+        value: /var/chen-honey-storage
+      - key: MAX_UPLOAD_MB
+        value: 50
+    disk:
+      name: chen-honey-storage
+      mountPath: /var/chen-honey-storage
+      sizeGB: 1
