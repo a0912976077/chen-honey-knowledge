@@ -4,3 +4,4 @@ uploads/*
 !uploads/.gitkeep
 data/knowledge.json
 data/login-attempts.json
+supabase/.temp/
