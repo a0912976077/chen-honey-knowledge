@@ -18,7 +18,7 @@ let knowledge=[
 const builtInKnowledge=[...knowledge];
 async function loadUploadedKnowledge(){
   try{
-    const response=await fetch('/api/knowledge',{cache:'no-store'});
+    const response=await fetch('https://nrysdafugejtspfswyte.supabase.co/functions/v1/knowledge',{cache:'no-store',headers:{apikey:'sb_publishable_8u3DgBBIM0YV67lJSf95Hw_XMZZmR6X'}});
     if(!response.ok)throw new Error('API unavailable');
     const uploaded=await response.json();
     knowledge=[...builtInKnowledge,...uploaded];

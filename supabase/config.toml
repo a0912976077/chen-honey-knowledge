@@ -1,0 +1,4 @@
+project_id = "nrysdafugejtspfswyte"
+
+[functions.knowledge]
+verify_jwt = false
